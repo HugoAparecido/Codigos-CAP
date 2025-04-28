@@ -9,12 +9,13 @@ Jander Moreira - 2025
 */
 #include <stdio.h>
 
-int main(void) {
+int main(void)
+{
     double valor1 = 2.5; // NÃO USAR FLOAT
     double valor2 = 6.4;
 
     double media = (valor1 + valor2) / 2;
-    
+
     printf("media = %g\n", media);
     return 0;
 }

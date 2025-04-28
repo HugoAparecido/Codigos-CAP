@@ -7,7 +7,8 @@ CAP - 2025
 */
 #include <stdio.h>
 
-int main(void) {
+int main(void)
+{
     printf("Oi\n");
     printf("Boa Tarde");
     return 0;
