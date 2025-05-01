@@ -1,0 +1,1 @@
+// Dadas 2 descrições de retângulos, dizer se é ou não o mesmo retângulo

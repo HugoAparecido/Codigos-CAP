@@ -12,7 +12,7 @@ int main(void)
         int i = 10;
         printf("no bloco\n");
         printf("i = %d\n", i);
-    }
+    };
 
     printf("oi\n");
     printf("i = %d\n", i);
