@@ -192,6 +192,21 @@ struct matriz subtracao_matriz(struct matriz primeira_matriz, struct matriz segu
     return soma_matriz(primeira_matriz, multiplicar_escalar(segunda_matriz, -1));
 }
 
-struct matriz multiplica_matriz(struct matriz primeira_matriz, struct matriz segunda_matriz){
-    
+struct matriz multiplica_matriz(struct matriz primeira_matriz, struct matriz segunda_matriz)
+{
+    struct matriz resultado;
+    if (primeira_matriz.colunas != segunda_matriz.linhas)
+        return nova_matriz(0, 0);
+    else
+    {
+        resultado.linhas = segunda_matriz.colunas;
+        resultado.colunas = segunda_matriz.linhas;
+        for (int i = 0; i < primeira_matriz.linhas; i++)
+            for (int j = 0; j < segunda_matriz.colunas; j++)
+            {
+                resultado.dados[i][j] = 0;
+                for (int k = 0; k < primeira_matriz.colunas; k++)
+                    resultado.dados[i][j] += primeira_matriz.dados[i][k] * segunda_matriz.dados[k][j];
+            }
+    }
 }
